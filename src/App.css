@@ -1,38 +1,85 @@
-.App {
+
+.home{
+  display: grid;
+  justify-content: center;
   text-align: center;
+  padding: 20px 40px;
+  margin: 30px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  color: #530343;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h4{
+  color: rgba(82, 45, 82, 0.847);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p{
+  color: rgb(74, 81, 80);
+}
+nav{
   display: flex;
-  flex-direction: column;
+   justify-content: center;
+   gap: 1.3rem;
+   background-color: hsla(0, 4%, 22%, 0.384);
+   font-size: 20px;
+}
+nav a{
+  text-decoration: none;
+  color:#3b3737e7;
+}
+nav a:hover{
+  background-color:#cbbebe ;
+  color:#c25252
+}
+.login{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+  padding: 20px 40px;
+  margin: 30px;
+}
+.content{
+  display:grid;
+  justify-content: center;
+  align-items: center;
+}
+.listsearch,h1{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.content{
+  padding:30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.data
+{
+   padding:10px;
+   border-radius: 10px;
+    border:2px solid black;
+}
+#img
+{
+    width:50%;
+    height:50%;
+}
+.products
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.productdetails{
+  display: grid;
+  gap:2px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+}
+button{
+  width: 50%;
+}
+li{
+  display: flex;
 }
