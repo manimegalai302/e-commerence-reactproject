@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
+import {useAuth} from './auth';
+import { useNavigate } from 'react-router-dom';
 
-function Login({ onLogin }) {
-  const [username, setUsername] = useState('');
+function Login() {
+  const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
+  const auth=useAuth();
+  let navigate = useNavigate();
 
   const handleLogin = () => {
-    
-    if (username && password) {
-      onLogin(username)
-    }
+    auth.login(user);
+    navigate('/');
   };
 
   return (
@@ -17,8 +19,8 @@ function Login({ onLogin }) {
       <input
         type="text"
         placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        value={user}
+        onChange={(e) => setUser(e.target.value)}
       />
       <input
         type="password"

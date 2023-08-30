@@ -1,12 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "./Components/auth";
 const Navbar=()=>{
+    const auth = useAuth();
 return(
     <div className="navbar">
         <nav>
-        <Link to ="./Login">Login</Link>
-        <Link to ="./products">View products</Link>
+        <Link to ="/">Home</Link>   
+        <Link to ="./products">Products</Link>
+        <Link to ="./profile">Profile</Link>
+        {
+            !auth.user && (
+                <Link to ="./login">Login</Link>
+            )
+        }
         </nav>
+       
     </div>
 )
 }
